@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App - Hemant Bhat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- <div class="container w-full flex mx-auto p-2 bg-red-100">
+        <div class="left mx-2">
+            <form id="form">
+                <label class="text-xl font-bold" for="post">Post</label>
+                <br>
+                <textarea class="p-1" name="post" id="input" rows="5" cols="30"></textarea>
+                <br>
+                <span id="msg" class="text-red-600"></span>
+                <button type="submit" class="bg-green-400 hover:bg-green-600 hover:text-white py-1 px-2 block rounded">Post</button>
+            </form>
+        </div>
+        <div class="right mx-2">
+            <h3 class="text-xl font-bold">Your Posts Here</h3>
+            <div id="posts">
+               
+            </div>
+        </div>
+    </div> -->
+
+    <div class="app mx-auto text-center bg-blue-200 h-screen">
+        <h4 class="text-2xl font-bold py-2">ToDo App</h4>
+        <button class="bg-green-500 hover:bg-green-700 text-white p-1 px-5 my-2 rounded" onclick="openModal()">Add New Task +</button>
+        <div class="w-64 md:w-1/2 mx-auto bg-blue-100" id="tasks"></div>
+    </div>
+    <form class="modal hidden bg-white border w-80 md:w-96 mx-auto" id="taskForm">
+        <div class="modal-head bg-gray-200 p-2 font-bold text-center">
+            Add New Task
+        </div>
+        <div class="modal-body p-2">
+            <p class="font-medium">Taks Title</p>
+            <input type="text" class="border border-gray-300 w-full p-1 mt-1" name="" id="textInput" />
+            <div class="text-red-600" id="msg"></div>
+            <p class="font-medium">Due Date</p>
+            <input type="date" class="border border-gray-300 w-full p-1 mt-1" name="" id="dateInput" />
+            <p class="font-medium">Description</p>
+            <textarea name="" class="border border-gray-300 w-full p-1 mt-1" id="textarea" cols="30" rows="5"></textarea>
+        </div>
+        <div class="modal-btn p-2 h-12 border-t-2 border-inherit">
+            <button type="submit" class="float-right bg-green-500 hover:bg-green-600 text-white p-1 px-8 rounded">Add</button>
+            <button id="cancel" class="float-right bg-red-500 hover:bg-red-600 disabled:bg-gray-300 text-white p-1 px-5 mx-2 rounded" onclick="openModal()">Cancel</button>
+        </div>
+    </form>
+    <div class="fixed bottom-0 w-full flex justify-center mb-5">
+        <a href="https://www.instagram.com/hemant__bhat/" target="_blank" class="text-3xl mx-2"><ion-icon name="logo-instagram"></ion-icon></a>
+        <a href="https://www.facebook.com/HemantBhat143/" target="_blank" class="text-3xl mx-2"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="https://github.com/Hemant-Bhat" target="_blank" class="text-3xl mx-2"><ion-icon name="logo-github"></ion-icon></a>
+        <a href="https://www.linkedin.com/in/hemant-bhat/" target="_blank" class="text-3xl mx-2"><ion-icon name="logo-linkedin"></ion-icon></a>
+    </div>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="js/script.js"></script>
+    <style>
+        .modal{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 9;
+            box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.324);
+            user-select: none;
+        }
+    </style>
+</body>
+
+</html>
