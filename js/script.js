@@ -84,7 +84,7 @@ function createTask(){
             <div id=${y} class="border-4 border-blue-300 my-1">
                 <span class="text-xl font-medium">${x.text}</span>
                 <span class="block text-gray-500">${x.date}</span>
-                <p class="p-1 py-3">${x.description}</p>
+                <p class="p-1 py-3 max-h-64 overflow-auto">${x.description}</p>
 
                 <span class="options ml-2">
                     <ion-icon onclick="editTask(this)" name="create" class="cursor-pointer border border-gray-300 p-1 hover:bg-green-300"></ion-icon>
