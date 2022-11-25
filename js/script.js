@@ -81,14 +81,14 @@ function createTask(){
     tasks.innerHTML = "";
     data.map((x, y) => {
         return (tasks.innerHTML += `
-            <div id=${y} class="border-4 border-blue-300 my-1">
+            <div id=${y} class="border-4 border-blue-300 dark:border-gray-500 my-1">
                 <span class="text-xl font-medium">${x.text}</span>
-                <span class="block text-gray-500">${x.date}</span>
+                <span class="block text-gray-500 dark:text-gray-300">${x.date}</span>
                 <p class="p-1 py-3 max-h-64 overflow-auto">${x.description}</p>
 
                 <span class="options ml-2">
-                    <ion-icon onclick="editTask(this)" name="create" class="cursor-pointer border border-gray-300 p-1 hover:bg-green-300"></ion-icon>
-                    <ion-icon onclick="deleteTask(this)" name="trash" class="cursor-pointer border border-gray-300 p-1 hover:bg-red-300"></ion-icon>
+                    <ion-icon onclick="editTask(this)" name="create" class="cursor-pointer border border-gray-300 p-1 hover:bg-green-300 dark:hover:bg-green-600"></ion-icon>
+                    <ion-icon onclick="deleteTask(this)" name="trash" class="cursor-pointer border border-gray-300 p-1 hover:bg-red-300 dark:hover:bg-red-600"></ion-icon>
                 </span>
             </div>
         `)
